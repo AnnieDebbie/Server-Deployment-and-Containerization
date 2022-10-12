@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: simple-flask-deployment
+  name: eksctl-demo
   labels:
     app: simple-flask
 spec:
@@ -22,7 +22,7 @@ spec:
       containers:
       - name: simple-flask
         # image: IMAGE_TAG
-        image: sudkul/simple-flask
+        image: anniedebbie/simple-flask
         securityContext:
           privileged: false
           readOnlyRootFilesystem: false
